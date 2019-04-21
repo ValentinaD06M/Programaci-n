@@ -115,7 +115,7 @@ public class Calculadora {
 	}
 			
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 
 import java.util.Scanner;
@@ -189,3 +189,99 @@ public class operaciones {
 	}
 
 
+
+--------------------------------------------------------------------------------------------------------------------
+	
+	package uri_ejercicios;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+
+
+public static void main(String[] args)
+{
+BufferedReader br = new BufferedReader( new InputStreamReader( System.in ));
+BufferedWriter bw = new BufferedWriter( new OutputStreamWriter( System.out ));
+
+try
+{	
+	//Aca debe estar la logica que usted propone para resolver el problema
+	//Leer de entero: int x = Integer.parseInt( br.readLine() )	
+	int x [][];
+	x = new int [1][4];
+	x[1][1] = 1;
+	x[1][2] = 2;
+	x[1][3] = 3;
+	x[1][4] = 4;
+	
+	for (int j=0;j<4; j++)
+	{
+		System.out.println(""+x[1][j]);
+	}
+bw.flush();
+}
+catch(Exception ex) 
+{
+ex.printStackTrace();
+}
+}
+{
+	try
+	{	
+		//Aca debe estar la logica que usted propone para resolver el problema
+		//Leer de entero: int x = Integer.parseInt( br.readLine() )	
+		final int Filas = 4, Columnas = 22;
+		Scanner sc = new Scanner (System.in);
+		int i, j, mayor, menor;
+		int filaMayor, filaMenor, colMayor, colMenor;
+		int [][] A = new int[Filas][Columnas];
+		System.out.println("leer matriz:");
+		for (i = 0; i < Filas; i++) {
+			for (j = 0; j < Columnas; j++) {
+				System.out.print("A[" + i + "][" + j + "]= ");
+				A[i][j] = sc.nextInt();
+			}
+		}
+		System.out.println("valores introducidos:");
+		for (i = 0; i < A.length; i++) {
+			for (j = 0; j < A[i].length; j++) {
+			System.out.print(A[i] [j] + " ");
+		}
+		System.out.println();
+	}
+		mayor = menor = A[0][0];
+		filaMayor = filaMenor = colMayor = colMenor = 0;
+		
+		for (i = 0; i < A.length; i++) {
+			for (j = 0; j < A[i].length; j++) {
+				if (A[i][j] > mayor) {
+					mayor = A[i][j];
+					filaMayor = i;
+					colMayor = j;
+				}
+				else if (A[i][j] < menor) {
+					menor = A[i][j];
+					filaMenor = i;
+					colMenor = j;
+				}
+			}
+	}
+		{
+	System.out.print("Elemento mayor: " + mayor);
+	System.out.println(" Fila: "+ filaMayor + " columna: " + colMayor);
+	System.out.print("Elemento menor: " + menor);
+	System.out.println(" Fila: "+ filaMenor + " columna: " + colMenor);
+	}
+	bw.flush();
+	}
+	catch(Exception ex) 
+	{
+	ex.printStackTrace();
+}	
+}
+}
+
+
+	
